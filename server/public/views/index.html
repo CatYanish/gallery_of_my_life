@@ -12,7 +12,21 @@
   <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap-theme.css">
   <link rel="stylesheet" href="views/styles.css">
 </head>
-<body>
+<body ng-app="myApp">
+  <div class="container">
+    <div ng-controller="GalleryController as gallery">
+      <h1>Gallery of My Life</h1>
+      <div class="picturegallery" ng-repeat="picture in gallery.pictures track by $index">
+          <img ng-show="picture.visible" ng-src="{{picture.url}}" ng-click="gallery.toggle(picture)" alt="">
+          <div class="description" ng-hide="picture.visible" ng-click="gallery.toggle(picture)" > {{picture.description}}
 
+          </div>
+
+      </div>
+      <!-- HIde and Show specific people -->
+      <!-- <button ng-click="welcome.toggle(person)">Toggle</button>
+      <button ng-click="welcome.delete($index)">Delete</button> -->
+    </div>
+  </div>
 </body>
 </html>
