@@ -9,11 +9,12 @@
   background-color: skyblue;
   font-size: 20px;
   font-family: sans-serif;
-  display: inline-block;
+
 }
 
 img {
   width: 300px;
   height: 300px;
   margin: 20px;
+
 }
