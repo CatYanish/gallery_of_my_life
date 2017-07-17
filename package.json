@@ -1,7 +1,7 @@
 {
   "name": "gallery_of_my_life",
   "version": "1.0.0",
-  "description": "",
+  "description": "TODOS",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",

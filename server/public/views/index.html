@@ -16,16 +16,15 @@
   <div class="container">
     <div ng-controller="GalleryController as gallery">
       <h1>Gallery of My Life</h1>
-
-
-
-        <div class="picturegallery" ng-repeat="picture in gallery.pictures track by $index">
-          <img ng-show="picture.visible" ng-src="{{picture.url}}" ng-click="gallery.toggle(picture)" alt="">
-          <div class="description" ng-hide="picture.visible" ng-click="gallery.toggle(picture)" > <p>{{picture.description}}</p></div>
-          <button ng-click="gallery.likes(picture)"><span class="glyphicon glyphicon-heart"></span>{{picture.likes}}</button>
+      <div class="picturegallery" ng-repeat="picture in gallery.pictures track by $index">
+        <img ng-show="picture.visible" ng-src="{{picture.url}}" ng-click="gallery.toggle(picture)" alt="">
+        <div class="description" ng-hide="picture.visible" ng-click="gallery.toggle(picture)" > <p>{{picture.description}}</p></div>
+        <div class="buttonstyle">
+          <button ng-click="gallery.likes(picture)"><span class="glyphicon glyphicon-heart"  + " " + ></span>{{picture.likes}}</button>
         </div>
       </div>
     </div>
   </div>
+</div>
 </body>
 </html>

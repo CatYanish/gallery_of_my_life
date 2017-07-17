@@ -1,15 +1,22 @@
+body {
+  background-color: #F4D0CD;
+}
+
+
 .picturegallery {
-  display: inline-block;
+  float: left;
+  height: 340px;
+  width: 340px;
 }
 
 .description {
   width: 300px;
   height: 300px;
   margin: 20px;
-  background-color: skyblue;
+  background-color: #9B736F;
   font-size: 20px;
   font-family: sans-serif;
-
+  text-align: center;
 }
 
 img {
@@ -17,4 +24,30 @@ img {
   height: 300px;
   margin: 20px;
 
+}
+
+
+button {
+  margin: 0;
+  position: relative;
+  margin-top: 20px;
+  height: 30px;
+  width: 300px;
+  border: none;
+  font-size: 16px;
+  background-color: #C18A85;
+}
+
+
+
+
+.buttonstyle {
+  position: relative;
+  left: 20px;
+  bottom: 40px;
+}
+
+
+.glyphicon {
+  margin-right: 10px;
 }
