@@ -8,8 +8,8 @@
   <title>Gallery of My Life</title>
   <script type="text/javascript" src="vendors/angular.js"></script>
   <script type="text/javascript" src="scripts/client.js"></script>
-  <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.css">
-  <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="vendors/bootstrap.css">
+  <link rel="stylesheet" href="vendors/bootstrap-theme.css">
   <link rel="stylesheet" href="views/styles.css">
 </head>
 <body ng-app="myApp">
@@ -20,7 +20,11 @@
         <img ng-show="picture.visible" ng-src="{{picture.url}}" ng-click="gallery.toggle(picture)" alt="">
         <div class="description" ng-hide="picture.visible" ng-click="gallery.toggle(picture)" > <p>{{picture.description}}</p></div>
         <div class="buttonstyle">
-          <button ng-click="gallery.likes(picture)"><span class="glyphicon glyphicon-heart"  + " " + ></span>{{picture.likes}}</button>
+          <button ng-click="gallery.likes(picture)">{{picture.likes}}</button>
+        </div>
+        <div class="comment-btn">
+          <input type="text" ng-model="comment">
+          <button type="button" ng-click="gallery.addComment(picture, comment)">Comment</button>
         </div>
       </div>
     </div>
